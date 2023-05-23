@@ -56,6 +56,10 @@
 
     <!-- Supported overrides -->
     <param name="debug" value="$(arg debug)" type="bool" />
+
+    <!-- Remap topic names published before by odom_publisher to maintain retro compatibility -->
+    <remap from="gnss1/fix" to="fix"/>
+    <remap from="nav/filtered_imu/data" to="imu"/>
   </node>
 
 </launch>
